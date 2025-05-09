@@ -1,0 +1,144 @@
+{% load static %}
+<header>
+    <!-- Header Start -->
+    <div class="header-area header-transparent">
+        <div class="main-header header-sticky">
+            <div class="container-fluid navbar-container">
+                <style>
+                    .navbar-container {
+  margin-top: 60px;
+  transition: margin-top 0.3s ease;
+}
+
+.navbar-container.scrolled {
+  margin-top: 0;
+}
+.menu-wrapper {
+  height: 100px;
+  transition: height 0.3s ease;
+}
+
+.navbar-container.scrolled .menu-wrapper {
+  height: 70px; /* smaller navbar on scroll */
+}
+
+                </style>
+
+                <div class="menu-wrapper d-flex align-items-center justify-content-between" style="height: 100px; overflow: hidden;">
+
+                    <!-- Logo -->
+                    <div class="logo">
+                        <a href="/"><img src="{% static 'assets/img/logo/logo.png' %}" alt="Home" style="height: 80px; width: auto;"></a>
+                    </div>
+                    <!-- Main-menu -->
+                    <div class="main-menu f-right d-none d-lg-block">
+                        <nav>
+                            <ul id="navigation">
+                                <li><a href="{% url 'index' %}">Home</a></li>
+                                <li><a href="{% url 'about' %}">About Us</a></li>
+                                <li><a href="{% url 'services' %}">Services</a></li>
+                                <li><a href="{% url 'work' %}">Projects</a></li>
+                    
+                                <!-- <li>
+                                    <a href="{% url 'services' %}">Services <i class="fas fa-caret-down"></i></a>
+                                    <ul class="submenu">
+                                        <li><a href="{% url 'work' %}">Interior Services</a></li>
+                                        <li><a href="{% url 'services' %}">Real Estate Services</a></li>
+                                    </ul>
+                                </li> -->
+                    
+                                <li><a href="{% url 'contact' %}">Contact</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <style>
+                        /* Fix overflow clipping */
+                        .menu-wrapper {
+                            overflow: visible !important;
+                        }
+                        
+                        .main-menu nav ul li {
+                            position: relative;
+                            overflow: visible;
+                        }
+                        
+                        /* Main menu styling */
+                        #navigation {
+                            list-style: none;
+                            margin: 0;
+                            padding: 0;
+                            display: flex;
+                            gap: 30px;
+                        }
+                        
+                        #navigation > li {
+                            position: relative;
+                        }
+                        
+                        #navigation > li > a {
+                            color: white;
+                            text-decoration: none;
+                            padding: 10px 15px;
+                            display: block;
+                        }
+                        
+                        /* Submenu styling */
+                        #navigation li .submenu {
+                            display: none;
+                            position: absolute;
+                            top: 100%;
+                            left: 0;
+                            background-color: white;
+                            padding: 10px 0;
+                            min-width: 200px;
+                            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+                            z-index: 9999;
+                            list-style: none;
+                            margin: 0;
+                        }
+                        
+                        #navigation li .submenu li a {
+                            display: block;
+                            padding: 8px 20px;
+                            color: #333;
+                            text-decoration: none;
+                        }
+                        
+                        /* Show submenu on hover */
+                        #navigation li:hover > .submenu {
+                            display: block;
+                        }
+                        
+                        /* Optional hover effect for submenu links */
+                        #navigation li .submenu li a:hover {
+                            background-color: #f0f0f0;
+                            color: #000;
+                        }
+                        </style>
+                               
+                    <!-- Header-btn -->
+                    <div class="header-btns d-none d-lg-block f-right">
+                        <a href="{% url 'contact' %}" class="btn header-btn"><b>GET A QUOTE</b></a>
+                    </div>
+                    <!-- Mobile Menu -->
+                    <div class="col-12">
+                        <div class="mobile_menu d-block d-lg-none"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+          window.addEventListener('scroll', function() {
+        const navbarContainer = document.querySelector('.navbar-container');
+        if (window.scrollY > 50) {
+          navbarContainer.classList.add('scrolled');
+        } else {
+          navbarContainer.classList.remove('scrolled');
+        }
+      });
+    </script>
+  
+      
+    <!-- Header End -->
+</header>

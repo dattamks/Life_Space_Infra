@@ -1,0 +1,66 @@
+{% load static %}
+<style>
+    .top-bar {
+      background-color: #060202;
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      height: 60px; /* Increased height */
+      font-size: 15px;
+    }
+    .top-bar .left, 
+    .top-bar .center, 
+    .top-bar .right {
+      flex: 1;
+      display: flex;
+      align-items: center;
+    }
+    .top-bar .left {
+      justify-content: flex-start;
+      gap: 10px;
+    }
+    .top-bar .center {
+      justify-content: center;
+      gap: 10px;
+    }
+    .top-bar .right {
+      justify-content: flex-end;
+      gap: 15px;
+    }
+    .top-bar i {
+      margin-right: 5px;
+    }
+    .top-bar a {
+      color: #fff;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    .top-bar a:hover {
+      color: rgb(74, 234, 220);
+    }
+    .top-bar .icon-highlight {
+      color: rgb(74, 234, 220); /* phone/mail icon default color */
+    }
+</style>
+
+<div class="top-bar">
+    <div class="left">
+        <span><i class="fas fa-phone-alt icon-highlight"></i> +91 9154691126</span>
+    </div>
+    <div class="center">
+      <span>
+          <i class="fas fa-envelope icon-highlight"></i> 
+          <a href="mailto:info@lifespaceinfra.in" >info@lifespaceinfra.in</a>
+      </span>
+  </div>
+    <div class="right">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-google"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+    </div>
+</div>
+
