@@ -34,15 +34,15 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get("DEBUG", "False").lower() == "true"
 
-ALLOWED_HOSTS = []
+
 
 if DEBUG == True:
     ALLOWED_HOSTS = ['*','localhost', '127.0.0.1']
 else:
-    ALLOWED_HOSTS = ['*.railway.app','lifespaceinfra.com']
+    ALLOWED_HOSTS = ['*.railway.app','lifespaceinfra.com','lifespaceinfra-production.up.railway.app']
 
 if DEBUG == False:
-    CSRF_TRUSTED_ORIGINS = ['https://*.railway.app','https://lifespaceinfra.com','https://www.lifespaceinfra.com']
+    CSRF_TRUSTED_ORIGINS = ['https://*.railway.app','https://lifespaceinfra.com','https://www.lifespaceinfra.com','https://lifespaceinfra-production.up.railway.app']
 
 
 
