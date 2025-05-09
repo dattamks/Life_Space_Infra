@@ -22,7 +22,69 @@
   height: 70px; /* smaller navbar on scroll */
 }
 
-                </style>
+    /* Fix overflow clipping */
+    .menu-wrapper {
+        overflow: visible !important;
+    }
+    
+    .main-menu nav ul li {
+        position: relative;
+        overflow: visible;
+    }
+    
+    /* Main menu styling */
+    #navigation {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        gap: 30px;
+    }
+    
+    #navigation > li {
+        position: relative;
+    }
+    
+    #navigation > li > a {
+        color: white;
+        text-decoration: none;
+        padding: 10px 15px;
+        display: block;
+    }
+    
+    /* Submenu styling */
+    #navigation li .submenu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: white;
+        padding: 10px 0;
+        min-width: 200px;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+        z-index: 9999;
+        list-style: none;
+        margin: 0;
+    }
+    
+    #navigation li .submenu li a {
+        display: block;
+        padding: 8px 20px;
+        color: #333;
+        text-decoration: none;
+    }
+    
+    /* Show submenu on hover */
+    #navigation li:hover > .submenu {
+        display: block;
+    }
+    
+    /* Optional hover effect for submenu links */
+    #navigation li .submenu li a:hover {
+        background-color: #f0f0f0;
+        color: #000;
+    }
+    </style>
 
                 <div class="menu-wrapper d-flex align-items-center justify-content-between" style="height: 100px; overflow: hidden;">
 
@@ -51,74 +113,11 @@
                             </ul>
                         </nav>
                     </div>
-                    <style>
-                        /* Fix overflow clipping */
-                        .menu-wrapper {
-                            overflow: visible !important;
-                        }
-                        
-                        .main-menu nav ul li {
-                            position: relative;
-                            overflow: visible;
-                        }
-                        
-                        /* Main menu styling */
-                        #navigation {
-                            list-style: none;
-                            margin: 0;
-                            padding: 0;
-                            display: flex;
-                            gap: 30px;
-                        }
-                        
-                        #navigation > li {
-                            position: relative;
-                        }
-                        
-                        #navigation > li > a {
-                            color: white;
-                            text-decoration: none;
-                            padding: 10px 15px;
-                            display: block;
-                        }
-                        
-                        /* Submenu styling */
-                        #navigation li .submenu {
-                            display: none;
-                            position: absolute;
-                            top: 100%;
-                            left: 0;
-                            background-color: white;
-                            padding: 10px 0;
-                            min-width: 200px;
-                            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
-                            z-index: 9999;
-                            list-style: none;
-                            margin: 0;
-                        }
-                        
-                        #navigation li .submenu li a {
-                            display: block;
-                            padding: 8px 20px;
-                            color: #333;
-                            text-decoration: none;
-                        }
-                        
-                        /* Show submenu on hover */
-                        #navigation li:hover > .submenu {
-                            display: block;
-                        }
-                        
-                        /* Optional hover effect for submenu links */
-                        #navigation li .submenu li a:hover {
-                            background-color: #f0f0f0;
-                            color: #000;
-                        }
-                        </style>
+
                                
                     <!-- Header-btn -->
-                    <div class="header-btns d-none d-lg-block f-right">
-                        <a href="{% url 'contact' %}" class="btn header-btn"><b>GET A QUOTE</b></a>
+                    <div class="header-btns d-none  d-sm-block f-right">
+                        <a href="{% url 'contact' %}" class="btn header-btn btn-sm rounded p-4 m-0"><b>GET A QUOTE</b></a>
                     </div>
                     <!-- Mobile Menu -->
                     <div class="col-12">
