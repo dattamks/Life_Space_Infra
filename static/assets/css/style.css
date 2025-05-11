@@ -3011,11 +3011,11 @@ hero-btn {
 
 /* line 933, ../../../sponDon TI/Running Project/263.InteriorDesign_HTML/HTML/assets/scss/_common.scss */
 .section-tittle span {
-  font-size: 16px;
+  font-size: 30px;
   display: block;
   color: #7e7e7e;
   font-weight: 400;
-  text-transform: uppercase;
+ 
   margin-bottom: 17px;
 }
 
@@ -3053,6 +3053,7 @@ hero-btn {
 /* line 958, ../../../sponDon TI/Running Project/263.InteriorDesign_HTML/HTML/assets/scss/_common.scss */
 .section-tittle p {
   color: #717b9b;
+
 }
 
 /* line 963, ../../../sponDon TI/Running Project/263.InteriorDesign_HTML/HTML/assets/scss/_common.scss */
@@ -3060,6 +3061,7 @@ hero-btn {
   color: #383838;
   font-size: 16px;
   font-weight: 300;
+ 
 }
 
 /* line 969, ../../../sponDon TI/Running Project/263.InteriorDesign_HTML/HTML/assets/scss/_common.scss */
